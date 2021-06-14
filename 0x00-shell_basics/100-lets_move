@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -regextype sed -regex ".*/[A-Z9\-]\{1\}\*.*" mv /tmp/u
+find . -type f -name "[[:upper:]]*" -exec mv /tmp/u
