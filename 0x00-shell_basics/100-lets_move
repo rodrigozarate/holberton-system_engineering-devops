@@ -1,2 +1,2 @@
 #!/bin/bash
-find -name {"[A-Z]*.*":0:1} mv /tmp/u
+find . -regextype sed -regex ".*/[A-Z9\-]\{1\}\*.*" mv /tmp/u
