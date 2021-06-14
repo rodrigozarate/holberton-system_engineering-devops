@@ -1,3 +1,2 @@
 #!/bin/bash
 find -name {"[A-Z]*.*":0:1} mv /tmp/u
-
