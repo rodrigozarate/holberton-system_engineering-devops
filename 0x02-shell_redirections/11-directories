@@ -1,2 +1,2 @@
 #!/bin/bash
-listls | wc -l
+ls -lRa
