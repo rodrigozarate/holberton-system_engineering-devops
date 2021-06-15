@@ -1,2 +1,2 @@
 #!/bin/bash
-find . ! -type d -name '*.js' -print0 | xargs -0 rm
+find . ! -type d -name "*.js" -print0 | xargs -0 rm
