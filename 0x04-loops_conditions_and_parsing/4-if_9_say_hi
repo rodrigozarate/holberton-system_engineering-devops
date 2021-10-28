@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Display "Best School" 10 times using until if 8 say "Hi"
+i=0
+while [ $i -lt 9 ]
+do
+	echo "Best School"
+	if [ "$i" == 8 ]
+	then
+		echo "Hi"
+	fi
+	i=$(( i + 1 ))
+done
