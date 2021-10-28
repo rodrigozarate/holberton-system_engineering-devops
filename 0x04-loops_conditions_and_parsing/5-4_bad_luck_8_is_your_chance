@@ -3,10 +3,10 @@
 i=0
 while [ $i -le 9 ]
 do
-	if [ "$i" == 8 ]
+	if [ "$i" == 7 ]
 	then
 		echo "good luck"
-	elif [ "$i" == 4 ]
+	elif [ "$i" == 3 ]
 	then
 		echo "bad luck"
 	else
