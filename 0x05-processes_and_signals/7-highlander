@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Display inmortal script
+_no_kill() {
+	echo "I am invincible!!!"
+}
+trap _no_kill SIGTERM
+while true
+do
+	echo "To infinity and beyond"
+	sleep 2
+done

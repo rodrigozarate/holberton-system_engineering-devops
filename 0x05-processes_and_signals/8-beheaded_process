@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Kill inmortal PID
+pkill -9 -f 'bash ./7-highlander'
