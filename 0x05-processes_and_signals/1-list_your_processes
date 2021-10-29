@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# List all procesess even without TTY
+ps -auxf
