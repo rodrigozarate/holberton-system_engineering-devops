@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# print ip4 adresses
+ifconfig | grep "inet " | cut -d ' ' -f 10
