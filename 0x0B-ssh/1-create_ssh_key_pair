@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Example of public key creation
+ssh-keygen -b 4096 -f school -N betty
