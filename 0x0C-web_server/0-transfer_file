@@ -7,6 +7,10 @@ SSH_KEY=$4
 if [[ $# -lt 3 ]]
 then
 	echo "Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
-else
-	scp -i "$SSH_KEY" -o StrictHostKeyChecking=no "$PATH" "USER"@"IP":~/
+elif [[ $# -eq 4 ]]
+then
+	scp -o StrictHostKeyChecking=no -i "$SSH_KEY" "$PATH" "USER"@"IP":~/
+elif [[ $# -eq 3 ]]
+then
+        scp -o StrictHostKeyChecking=no "$PATH" "USER"@"IP":~/
 fi
