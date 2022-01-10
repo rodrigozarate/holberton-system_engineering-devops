@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Script to create a redirection
+sudo apt-get update -y && sudo apt-get upgrade -y
+sudo apt-get install -y nginx
+sudo chown -R "$USER":"$USER" /var/www/
+sudo chown -R "$USER":"$USER" /etc/nginx
+echo "Hello World" > /var/www/html/index.nginx-debian.html
+redurl="        rewrite ^/redirect_me https://www.zarate.com.co permanent;"
+sudo sed -i "53i $redurl" /etc/nginx/sites-available/default
+sed -i '/listen 80 default_server;/a add_header X-Served-By $hostname;' /etc/nginx/sites-available/default
+sudo service nginx restart
+sudo service nginx reload
