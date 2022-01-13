@@ -7,6 +7,7 @@ global
         user haproxy
         group haproxy
         daemon
+        tune.ssl.default-dh-param 2048
 
         # Default SSL material locations
         ca-base /etc/ssl/certs
@@ -32,3 +33,16 @@ defaults
         errorfile 502 /etc/haproxy/errors/502.http
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
+
+frontend firstbalance
+        bind *:80
+        #option forwardfor
+        default_backend webservers
+frontend www-https
+        bind *:443 ssl crt /etc/haproxy/certs/www.rodrigozarate.tech.pem
+        default_backend webservers
+backend webservers
+        balance roundrobin
+        server 3360-web-01 35.229.112.105:80 check
+        server 3360-web-02 54.198.54.180:80 check
+        #option httpchk
