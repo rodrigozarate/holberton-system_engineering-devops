@@ -36,7 +36,7 @@ defaults
 
 frontend firstbalance
         bind *:80
-        #option forwardfor
+        mode http
         default_backend webservers
 frontend www-https
         bind *:443 ssl crt /etc/haproxy/certs/www.rodrigozarate.tech.pem
@@ -45,4 +45,3 @@ backend webservers
         balance roundrobin
         server 3360-web-01 35.229.112.105:80 check
         server 3360-web-02 54.198.54.180:80 check
-        #option httpchk
