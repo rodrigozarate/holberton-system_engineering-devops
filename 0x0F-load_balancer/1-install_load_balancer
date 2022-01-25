@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#/usr/bin/env bash
 # Load balancer config script
 sudo apt-get -y install software-properties-common
 sudo add-apt-repository -y ppa:vbernat/haproxy-2.0
@@ -14,7 +14,7 @@ frontend load_balancer
     default_backend webserver
 backend webserver
     balance roundrobin
-    server 3360-web-01 35.229.112.105:80 check
+    server 3360-web-01 34.139.153.205:80 check
     server 3360-web-02 54.198.54.180:80 check
 " >> /etc/haproxy/haproxy.cfg
 sudo service haproxy restart
