@@ -10,7 +10,7 @@ if __name__ == '__main__':
     task_title = []
     complete = 0
     total_task = 0
-    url_user = "https://jsonplaceholder.typicode.com/users/" + id_c
+    url_user = "https://jsonplaceholder.typicode.com/users/" + id_employee
     res = requests.get(url_user).json()
     name = res.get('name')
     url_task = "https://jsonplaceholder.typicode.com/todos/"
