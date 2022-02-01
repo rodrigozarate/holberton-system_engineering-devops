@@ -1,11 +1,8 @@
 #!/usr/bin/python3
-"""
-    Python script that, using this REST API, for a given employee ID,
-    returns information about his/her TODO list progress.
-"""
+""" some word going here """
 
 import json
-import requests as rq
+import requests
 
 if __name__ == "__main__":
     print('Hello')
