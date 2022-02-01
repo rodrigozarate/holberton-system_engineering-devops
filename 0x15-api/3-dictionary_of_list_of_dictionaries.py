@@ -1,5 +1,5 @@
-#!/usr/bin/python3
 """Some kind of words regarding https://jsonplaceholder.typicode.com"""
+#!/usr/bin/python3
 import json
 import request
 
