@@ -7,5 +7,4 @@ import json
 import request
 
 if __name__ == '__main__':
-    filename = "todo_all_employees.json"
     print('hello')
