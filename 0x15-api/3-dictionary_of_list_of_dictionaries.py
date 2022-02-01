@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Python3 Example of dictionary Python3 Example of dictionary"""
+
 import json
 import request
 
