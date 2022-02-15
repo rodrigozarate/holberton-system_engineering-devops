@@ -15,7 +15,7 @@ def recurse(subreddit, hot_list=[], after=None):
             params['after'] = after
         else:
             return hot_list
-    response = request.get(REDDIT_URL.format(subreddit),
+    response = requests.get(REDDIT_URL.format(subreddit),
                            headers=headers, params=params)
     if response.status_code != 200:
         return None
@@ -23,6 +23,6 @@ def recurse(subreddit, hot_list=[], after=None):
     after = data.get('after', 'THEEND')
     if not after:
         after = "THEEND"
-    hot_list = hot_list + [post.get(''data', {}).get('title')
+    hot_list = hot_list + [post.get('data', {}).get('title')
                            for post in data.get('children', [])]
     return recurse(subreddit, hot_list, after)
