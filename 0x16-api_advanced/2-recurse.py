@@ -16,7 +16,7 @@ def recurse(subreddit, hot_list=[], after=None):
         else:
             return hot_list
     response = requests.get(REDDIT_URL.format(subreddit),
-                           headers=headers, params=params)
+                            headers=headers, params=params)
     if response.status_code != 200:
         return None
     data = response.json().get('data', {})
